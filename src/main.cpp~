@@ -1,0 +1,9 @@
+#include "MPI/process.hpp"
+
+
+int main(int argc, char *argv[])
+{
+	initProcess(argc, argv);
+	return 0;
+}
+

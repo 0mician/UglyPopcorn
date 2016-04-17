@@ -1,0 +1,26 @@
+#ifndef __MPIHELPER_HPP__
+#define __MPIHELPER_HPP__
+#include "../Game/player.hpp"
+#include "../Game/card.hpp"
+#include "MPIMessage.hpp"
+
+CPlayer *getPlayer(int f_iID = 0, bool isHuman = true);
+
+void syncProcess();
+
+bool	receiveBool(int f_iFrom );
+g_eCard receiveCard( int f_iFrom );
+g_eMsg	receiveMsg( int f_iFrom );
+uCardSet receiveCardSet( int f_iFrom );
+
+void sendCard( int f_iDest, g_eCard f_eCard );
+void sendMsg( int f_iDest, g_eMsg f_eMsg );
+void sendCardSet( int f_iDest, uCardSet f_uCardSet );
+void sendBool( int f_iDest, bool f_bBool );
+
+char 	*receiveName( int f_iFrom );
+void 	sendName( int f_iDest, char fc_strName[] );
+
+
+
+#endif

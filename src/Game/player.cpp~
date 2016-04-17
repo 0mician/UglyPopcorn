@@ -1,0 +1,15 @@
+#include "player.hpp"
+#include <iostream>
+#include <string.h>
+
+CPlayer::CPlayer(int f_iId , const char fc_strName[]) : m_iId(f_iId), m_bPlayable(true)
+{
+	setName(fc_strName);
+}
+
+void CPlayer::setName(const char fc_strName[])
+{
+	unsigned int iSizeMax = std::max<int>(24, sizeof(fc_strName));
+	strncpy ( m_strName, fc_strName, iSizeMax );
+}
+
