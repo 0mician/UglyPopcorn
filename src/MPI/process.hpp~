@@ -1,9 +1,0 @@
-#ifndef __PROCESS_HPP__
-#define __PROCESS_HPP__
-
-void initProcess(int argc, char *argv[]);
-
-void rootProcess(int f_iNbrPlayer);
-void childProcess(int f_iIdProcess);
-
-#endif
